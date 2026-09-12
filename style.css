@@ -1,1 +1,92 @@
-/* Popup styles (no layout yet) */
+/* Popup styles — timer & character layout */
+
+body {
+  margin: 0;
+  width: 350px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #1a1a1a;
+  background: #f7f8fa;
+}
+
+#timer-section,
+#character-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 20px;
+}
+
+#timer-section {
+  border-bottom: 1px solid #e2e5ea;
+}
+
+#timer-display {
+  font-size: 2.5rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+#start-task-btn {
+  appearance: none;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: #2f6fed;
+  cursor: pointer;
+}
+
+#start-task-btn:hover:not(:disabled) {
+  background: #1f5bd6;
+}
+
+#start-task-btn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+#character-img.character-placeholder {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin: 8px 0 12px;
+  transition: background-color 0.25s ease;
+}
+
+#character-img.character-placeholder.on-task {
+  background: #3cb371; /* happy placeholder */
+}
+
+#character-img.character-placeholder.distracted {
+  background: #e85d5d; /* sad placeholder */
+}
+
+#character-img:not(.character-placeholder) {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  margin: 8px 0 12px;
+}
+
+#summary-section {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #e2e5ea;
+}
+
+#summary-section[hidden] {
+  display: none;
+}
+
+#summary-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}

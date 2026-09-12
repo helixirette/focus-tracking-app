@@ -6,8 +6,16 @@
   </head>
   <body>
     <div id="task-section"></div>
-    <div id="timer-section"></div>
-    <div id="character-section"></div>
+    <div id="timer-section">
+      <div id="timer-display">25:00</div>
+      <button id="start-task-btn" type="button">Start Focus</button>
+    </div>
+    <div id="character-section">
+      <div id="character-img" class="character-placeholder on-task" aria-label="on-task"></div>
+      <div id="summary-section" hidden>
+        <p id="summary-text"></p>
+      </div>
+    </div>
     <script src="popup.js"></script>
   </body>
 </html>
